@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Snap Intro Section | Jumanji</title>
+    <link rel="stylesheet" href="style/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <header id="header">
+      <div class="part_1">
+        <div class="logo">
+          <h2>snap</h2>
+        </div>
+
+        <div class="menu">
+          <div class="menu_btn">
+            <p onclick="handleMenuToggle(this)" class="menu_icon">
+              <i class="fa fa-bars"></i>
+            </p>
+          </div>
+          <ul class="main_menu">
+            <li>
+              <a href="#"
+                >Features
+                <span
+                  ><img
+                    src="./images/icon-arrow-down.svg"
+                    alt="Drop Down Arrow"/></span
+              ></a>
+              <ul class="first_submenu">
+                <li>
+                  <a href="#"
+                    ><span
+                      ><img src="./images/icon-todo.svg" alt="Todo Icon"
+                    /></span>
+                    Todo List</a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><span
+                      ><img src="./images/icon-calendar.svg" alt="Calendar Icon"
+                    /></span>
+                    Calendar</a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><span
+                      ><img
+                        src="./images/icon-reminders.svg"
+                        alt="Reminder Icon"
+                    /></span>
+                    Reminder</a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><span
+                      ><img src="./images/icon-planning.svg" alt="Planning Icon"
+                    /></span>
+                    Planning</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="#"
+                >Company
+                <span
+                  ><img
+                    src="./images/icon-arrow-down.svg"
+                    alt="Drop Down Arrow"/></span
+              ></a>
+              <ul class="second_submenu">
+                <li><a href="#">History</a></li>
+                <li><a href="#">Our Team</a></li>
+                <li><a href="#">Blog</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">About</a></li>
+
+            <div class="menu_part2">
+              <button class="btn">Login</button>
+              <button class="btn btn2">Register</button>
+            </div>
+          </ul>
+        </div>
+      </div>
+
+      <div class="part_2">
+        <button class="btn">Login</button>
+        <button class="btn btn2">Register</button>
+      </div>
+    </header>
+
+    <main id="main">
+      <section id="hero">
+        <div class="part_1">
+          <div class="title">
+            <h1>Make remote work</h1>
+          </div>
+
+          <div class="text">
+            <p>
+              Get your team in sync, no matter your location. Streamline
+              processes, create team rituals, and watch productivity soar.
+            </p>
+          </div>
+
+          <div class="button">
+            <button class="btn btn3">Learn more</button>
+          </div>
+
+          <div class="clients">
+            <img src="./images/client-databiz.svg" alt="Databiz Client Logo" />
+            <img
+              src="./images/client-audiophile.svg"
+              alt="AudioPhile Client Logo"
+            />
+            <img src="./images/client-meet.svg" alt="Meet Client Logo" />
+            <img src="./images/client-maker.svg" alt="Maker Client Logo" />
+          </div>
+        </div>
+
+        <div class="part_2">
+          <img src="./images/image-hero-desktop.png" alt="Hero Image" />
+          <!-- Used CONTENT: URL('') TO CHANGE THE HERO IMAGE FOR MOBILE -->
+        </div>
+      </section>
+    </main>
+    <script>
+      //Handling Menu Button for Mobile
+      var main_menu = document.querySelector(".main_menu"),
+        menu_icon = document.querySelector(".menu_icon");
+
+      const handleMenuToggle = elem => {
+        main_menu.classList.toggle("active");
+        menu_icon.innerHTML =
+          menu_icon.innerHTML == `<i class="fa fa-times"></i>`
+            ? `<i class="fa fa-bars"></i>`
+            : `<i class="fa fa-times"></i>`;
+      };
+    </script>
+  </body>
+</html>
